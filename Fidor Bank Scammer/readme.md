@@ -2,6 +2,8 @@
 
 One of our friends received a phishing mail from the Mail: **admin@asiahaat.com**
 
+Scamer-Website: **https://anmeldung-fidor.de/session/login/session/new/**
+
 So we decided to help out :)
 
 The site was done pretty nicely and our friend almost fell for it until he saw the Mail.
