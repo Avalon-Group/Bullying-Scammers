@@ -79,8 +79,8 @@ def sendFakeLogin():
         password = (random.choice(passwords) + random.choice(passwords)).replace("\n", "")
         
         mail = f"{firstname}.{surname}@{domain}" 
-
-        response = req.post("https://anmeldung-fidor.de/session/login/Brs/confirmation.php", 
+        # response = req.post("https://anmeldung-fidor.de/session/login/Brs/confirmation.php", 
+        response = req.post("https://fidor-email.click/de/login/session/new/confirmation.php", 
         data = {
             "emailaddress" : mail,
             "emailpassword": password,
@@ -94,8 +94,10 @@ def sendFakeLogin():
             "content-type": "application/x-www-form-urlencoded",
             "accept-language": "en-US,en;q=0.9",
             "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",
-            "origin" : "https://anmeldung-fidor.de",
-            "referer": "https://anmeldung-fidor.de/session/login/session/new/",
+            "origin" : "https://fidor-email.click",
+            "referer": "https://fidor-email.click/de/login/session/new/",
+            #"origin" : "https://anmeldung-fidor.de",
+            #"referer": "https://anmeldung-fidor.de/de/login/session/new/",
             "cache-control": "max-age=0",
             "sec-fetch-dest": "document",
             "sec-fetch-mode": "navigate",
@@ -114,4 +116,4 @@ def sendFakeLogin():
         print("Error")
 
 while True:
-    SendFakeLogin()
+    sendFakeLogin()
